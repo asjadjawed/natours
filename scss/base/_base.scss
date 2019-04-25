@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* By using % way we don't overwrite user set font size */
+  font-size: calc(10 / 16 * 100%);
+}
+
+body {
+  box-sizing: border-box;
+}
