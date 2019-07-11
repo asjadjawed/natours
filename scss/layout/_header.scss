@@ -1,23 +1,28 @@
 .header {
   height: 95vh;
-  background-image: linear-gradient(
+  // the first background value comes on top
+  background: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
     url(../img/hero.jpg);
   background-size: cover;
+  // this ensure that top of image doesn't move on resize
   background-position: top;
+  // these coordinates (x, y) move top = right moving clockwise
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative;
 
   &__logo-box {
+    // for absolute the reference is parent element with relative position
     position: absolute;
     top: 4rem;
     left: 4rem;
   }
 
   &__logo {
+    // browser calculates width to maintain aspect ratio
     height: 3.5rem;
   }
 
