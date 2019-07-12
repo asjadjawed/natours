@@ -1,13 +1,14 @@
 .card {
-  // functionality and basic values
   /* perspective should be on parent element
   child element rotates */
+
+  // functionality and basic values
   perspective: 150rem;
   position: relative;
   height: 52rem;
 
   &__side {
-    height: 52rem;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -31,6 +32,22 @@
           to right bottom,
           $color-secondary-light,
           $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
         );
       }
     }
@@ -60,11 +77,23 @@
         ),
         url("../img/nat-5.jpg");
     }
+
     &--2 {
-      background-image: url("../img/nat-5.jpg");
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url("../img/nat-6.jpg");
     }
+
     &--3 {
-      background-image: url("../img/nat-5.jpg");
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url("../img/nat-7.jpg");
     }
   }
 
@@ -83,6 +112,7 @@
   &__heading-span {
     padding: 1rem 1.5rem;
     box-decoration-break: clone;
+
     &--1 {
       background-image: linear-gradient(
         to right bottom,
@@ -90,10 +120,27 @@
         rgba($color-secondary-dark, 0.85)
       );
     }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
   }
 
   &__details {
     padding: 3rem;
+
     ul {
       list-style: none;
       width: 80%;
