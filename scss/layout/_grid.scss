@@ -2,12 +2,14 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  // .row:not(:last-child) select every row except last
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   }
 
   @include clearfix;
 
+  // attribute selector for classes starting with "col-"
   [class^="col-"] {
     float: left;
 
@@ -16,6 +18,7 @@
     }
   }
 
+  // #{} inputs the value held by the variable
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
   }

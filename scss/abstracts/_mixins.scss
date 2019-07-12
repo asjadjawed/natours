@@ -1,4 +1,6 @@
+// clear fix is applied on parent containing the floats
 @mixin clearfix {
+  // ::after is appended as last child of parent element
   &::after {
     content: "";
     display: table;

@@ -40,6 +40,7 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
+  // clips background to text, make text transparent to see effect
   background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;

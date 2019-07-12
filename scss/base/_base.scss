@@ -9,7 +9,8 @@
 }
 
 html {
-  /* By using % way we don't overwrite user set font size */
+  /* By using % way we don't overwrite user set font size 
+  and any resizing is relative to user value */
   font-size: calc(10 / 16 * 100%);
 }
 

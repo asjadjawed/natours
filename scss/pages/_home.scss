@@ -1,5 +1,6 @@
 .section-about {
   background: $color-grey-light-1;
+  // this padding effectively gives minimum height; content sits in middle
   padding: 25rem 0;
   margin-top: -20vh;
 }

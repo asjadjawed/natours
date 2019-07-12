@@ -3,11 +3,12 @@
   // border: 10px solid red;
   // This div is 0px in height since all child elements are absolutely positioned
   // So hover only comes into effect if hovering on children
-
   &__photo {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
     position: absolute;
+    // base z-index for all images
     z-index: 10;
     transition: all 0.2s;
     outline-offset: 2rem;
@@ -31,10 +32,12 @@
       outline: 1.5rem solid $color-primary;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      // a higher z-index to make the image hovered on top
       z-index: 20;
     }
   }
 
+  // when hovered on composition select all photos not hovered
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }
