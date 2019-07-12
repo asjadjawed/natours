@@ -1,8 +1,7 @@
+// This div is 0px in height since all child elements are absolutely positioned
+// So hover only comes into effect if hovering on children
 .composition {
   position: relative;
-  // border: 10px solid red;
-  // This div is 0px in height since all child elements are absolutely positioned
-  // So hover only comes into effect if hovering on children
   &__photo {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
