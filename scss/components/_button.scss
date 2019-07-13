@@ -1,4 +1,7 @@
+// button styles for both links and buttons
+
 .btn {
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -9,6 +12,10 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    // changes for the <button element>
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,14 +28,16 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
   &--white {
     background: $color-white;
-    color: $color-gray-dark;
+    color: $color-gray-dark-1;
 
     &::after {
       background: $color-white;
