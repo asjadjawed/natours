@@ -14,6 +14,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative;
 
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+  }
+
   &__logo-box {
     // for absolute the reference is parent element with relative position
     position: absolute;
