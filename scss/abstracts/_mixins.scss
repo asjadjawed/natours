@@ -23,15 +23,6 @@
 1200 - 1800px  Desktop / Normal
 1800px +       Big Desktop */
 
-/* 
-// Simple mixin
-@mixin respond-phone {
-  @media (max-width: 600px) {
-    @content;
-  }
-}
-*/
-
 /*
 $breakpoint choices
 - phone
@@ -41,7 +32,7 @@ $breakpoint choices
 */
 
 // em are best option to handle media queries
-// rem is not supported as well as em
+// em / rem references default browser user agent styles i.e. 16px
 // we use em since user can have custom font size
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
@@ -65,3 +56,12 @@ $breakpoint choices
     }
   }
 }
+
+/* 
+// Simple mixin
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+*/

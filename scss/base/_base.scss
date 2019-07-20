@@ -12,7 +12,7 @@ html {
   /* By using % way we don't overwrite user set font size 
   and any resizing is relative to user value */
 
-  // 1 rem is 10px
+  // 1 rem is 10px; 100% is 16px
   font-size: calc(10 / 16 * 100%);
 
   @include respond(tab-land) {
