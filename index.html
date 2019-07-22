@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -111,18 +111,25 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
+              <!-- Responsive Images - Resolution Switching -->
               <img
                 src="./img/nat-1-large.jpg"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
               />
               <img
                 src="./img/nat-2-large.jpg"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 2"
                 class="composition__photo composition__photo--p2"
               />
               <img
                 src="./img/nat-3-large.jpg"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
               />
@@ -443,11 +450,22 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="./img/logo-green-2x.png"
-          alt="Full Logo"
-          class="footer__logo"
-        />
+        <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+        <picture class="footer__logo">
+          <!-- Art Direction + Density switching -->
+          <!-- media is same as media query in css -->
+          <source
+            srcset="
+              img/logo-green-small-2x.png 2x,
+              img/logo-green-small-1x.png 1x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <!-- responsive image - density switching -->
+          <!-- if only doing density switching include below attribute in img -->
+          <!-- srcset="img/logo-green-1x.png 1x, img/logo-green-1x.png 2x" -->
+          <img src="img/logo-green-2x.png" alt="Full Logo" />
+        </picture>
       </div>
 
       <div class="row">
